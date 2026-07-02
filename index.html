@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiffany Yeh · Pilates & Movement</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sand:    #f5f0e8;
+    --sand-mid:#ede6d6;
+    --sage:    #7a9e87;
+    --sage-dk: #4f7360;
+    --stone:   #b5a898;
+    --ink:     #2c2c2a;
+    --warm-wh: #fdfaf5;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-wh);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: rgba(253,250,245,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(181,168,152,0.2);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--stone);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--sage-dk); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 48px 0 80px;
+    gap: 60px;
+    background: var(--warm-wh);
+  }
+
+  .hero-text { padding-top: 80px; }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .hero-headline em {
+    font-style: italic;
+    color: var(--sage-dk);
+  }
+
+  .hero-body {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #6b6860;
+    max-width: 420px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    background: var(--sage-dk);
+    color: white;
+    text-decoration: none;
+    padding: 15px 36px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: background 0.25s, transform 0.2s;
+  }
+
+  .hero-cta:hover {
+    background: var(--sage);
+    transform: translateY(-2px);
+  }
+
+  .hero-visual {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Abstract organic shape as hero visual */
+  .hero-blob {
+    width: 580px;
+    height: 620px;
+    background: linear-gradient(145deg, #c8dac5 0%, #a8c4a2 40%, #7a9e87 100%);
+    border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+    position: relative;
+    overflow: hidden;
+    /* animation: morphBlob 8s ease-in-out infinite; */
+  }
+
+  @keyframes morphBlob {
+    0%,100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+    33%      { border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%; }
+    66%      { border-radius: 40% 60% 50% 50% / 45% 55% 45% 55%; }
+  }
+
+  /* .hero-blob::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='rgba(255,255,255,0.15)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='55' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='30' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3C/svg%3E") center/cover;
+  } */
+
+  .hero-blob-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    white-space: nowrap;
+  }
+
+  .hero-stats {
+    position: absolute;
+    bottom: -30px;
+    left: -20px;
+    background: white;
+    border-radius: 16px;
+    padding: 20px 28px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 28px;
+  }
+
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--sage-dk);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    color: var(--stone);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+
+  /* ── WAVE DIVIDER (signature element) ── */
+  .wave-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: 60px;
+  }
+
+  .wave-divider svg { display: block; width: 100%; }
+
+  /* ── ABOUT ── */
+  .about-section {
+    background: var(--sand);
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .section-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  .section-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .section-body {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #6b6860;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+
+  .about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 40% 60% 50% 50% / 60% 50% 60% 40%;
+    object-position: center 20%;
+  }
+
+  .value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .value-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--sage);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .value-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  .about-image-placeholder {
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, #c8dac5, #94b89e);
+    border-radius: 40% 60% 50% 50% / 60% 50% 60% 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-image-placeholder::before {
+    content: 'Your photo here';
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* -- ABOUT -- */
+  .blob-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  /* ── WAVE 2 ── */
+  .wave2 { background: var(--sand); }
+  .wave2 svg { display: block; width: 100%; }
+
+  /* ── WORK WITH ME ── */
+  .teach-section {
+    background: var(--warm-wh);
+    padding: 100px 80px;
+    text-align: center;
+  }
+
+  .teach-section .section-headline { margin-bottom: 12px; }
+  .teach-intro {
+    font-size: 1rem;
+    color: #6b6860;
+    max-width: 480px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .teach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .teach-card {
+    background: var(--sand);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: left;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .teach-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.07);
+  }
+
+  .teach-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--sage);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .teach-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .teach-style {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-dk);
+  border-top: 1px solid var(--sand-mid);
+  border-bottom: 1px solid var(--sand-mid);
+  padding: 8px 0;
+  margin-bottom: 12px;
+}
+
+  .teach-location {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sage);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .teach-desc {
+    font-size: 0.9rem;
+    color: #6b6860;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-section {
+    background: var(--sage-dk);
+    padding: 100px 80px;
+    text-align: center;
+  }
+
+  .testimonials-section .section-eyebrow { color: rgba(255,255,255,0.55); }
+  .testimonials-section .section-headline { color: white; margin-bottom: 60px; }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: left;
+    backdrop-filter: blur(4px);
+  }
+
+  .testimonial-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--sage);
+    line-height: 1;
+    margin-bottom: 12px;
+    opacity: 0.7;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 24px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-size: 0.88rem;
+    color: white;
+    font-weight: 500;
+  }
+
+  .author-tag {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 2px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    padding: 48px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: white; }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
+    .hero-visual { height: 320px; }
+    .hero-blob { width: 300px; height: 340px; }
+    .hero-stats { position: relative; bottom: auto; left: auto; margin-top: 24px; }
+    .about-section, .teach-section, .testimonials-section { padding: 60px 24px; }
+    .about-section { grid-template-columns: 1fr; }
+    .teach-grid { grid-template-columns: 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 20px; text-align: center; padding: 40px 24px; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  /* scroll fade-in */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Tiffany Yeh</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#teach">Work with Me</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-text fade-in">
+    <p class="hero-eyebrow">Comprehensive Pilates Teacher · Toronto</p>
+    <h1 class="hero-headline">Authentic and <br><em>intentional</em><br>- classically oriented Pilates.</h1>
+    <p class="hero-body">I help people reconnect with their bodies through mindful Pilates — building strength, ease, and a practice that lasts a lifetime.</p>
+    <a href="https://forms.gle/ZQ2rx6jGSWkUSSSV7" class="hero-cta">Book a session</a>
+  </div>
+
+  <div class="hero-visual fade-in" style="transition-delay:0.15s">
+    <div class="hero-blob">
+      <img src="tiffany-pull-straps.JPG"
+       alt="Tiffany, classical Pilates instructor Toronto"
+       class="blob-photo"
+       loading="lazy">
+      <div class="hero-blob-text"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE DIVIDER -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="#f5f0e8">
+    <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"/>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="fade-in">
+    <p class="section-eyebrow">About me</p>
+    <h2 class="section-headline">A lifelong practice built around <em>you</em>.</h2>
+    <p class="section-body">I came to Classical Pilates after years of pushing my body too hard and recovering from an injury from the demands of Pole training. The practice changed everything — not just physically, but in the way I move through daily life.</p>
+    <p class="section-body">Now I teach because I want that for everyone. Whether you're recovering from injury, building strength or better posture that lasts a lifetime — I meet you exactly where you are.</p>
+    <div class="about-values">
+      <div class="value-item"><div class="value-dot"></div><div class="value-text">Comprehensive Classical Pilates (Mat, Reformer, Chairs, Cadillac, Barrels, small apparatus) · Equinox Pilates Teacher Training Institute</div></div>
+      <div class="value-item"><div class="value-dot"></div><div class="value-text">Specialises in pre/postnatal, older adults, injury prevention and management, athletic & dance performance</div></div>
+      <div class="value-item"><div class="value-dot"></div><div class="value-text">Private sessions tailored to you</div></div>
+    </div>
+  </div>
+  <!-- <div class="about-image-placeholder fade-in" style="transition-delay:0.1s"></div> -->
+  <img
+    src="tiffany-side-profile.jpg"
+    alt="Tiffany, classical Pilates instructor in Toronto"
+    class="about-photo fade-in"
+    style="transition-delay:0.1s"
+    width="500"
+    height="667"
+    loading="lazy">
+</section>
+
+<!-- WAVE 2 -->
+<div class="wave2">
+  <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="#fdfaf5">
+    <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,40 L1440,80 L0,80 Z"/>
+  </svg>
+</div>
+
+<!-- WORK WITH ME -->
+<section class="teach-section" id="teach">
+  <p class="section-eyebrow fade-in">Work with Me</p>
+  <h2 class="section-headline fade-in">Find me at these studios</h2>
+  <p class="teach-intro fade-in">I teach across three studios in the city. While all studios are Contemporary Pilates studios, I adhere to key Classical Pilates principles in my sessions.</p>
+
+  <div class="teach-grid">
+    <div class="teach-card fade-in">
+      <div class="teach-icon">🌿</div>
+      <div class="teach-name">Peridot Wellness</div>
+      <div class="teach-location">Toronto · Wed, Sun</div>
+      <div class="teach-style">Privates · Semi-Privates · Small Groups</div>
+      <div class="teach-desc">Smaller classes, more personal attention. Many clients also do privates once to twice a week with me here. Privates and Semi-Privates available.</div>
+    </div>
+    <div class="teach-card fade-in" style="transition-delay:0.1s">
+      <div class="teach-icon">✨</div>
+      <div class="teach-name">Studio Fitology</div>
+      <div class="teach-location">North York · Mon, Tues, Fri, Sat</div>
+      <div class="teach-style">Privates · Group Fitness</div>
+      <div class="teach-desc">Pilates group fitness classes in a light-filled studio. Privates available.</div>
+    </div>
+    <div class="teach-card fade-in" style="transition-delay:0.2s">
+      <div class="teach-icon">🌿</div>
+      <div class="teach-name">IAM Yoga Pilates</div>
+      <div class="teach-location">Toronto · Wed, Thur</div>
+      <div class="teach-style">Group Fitness</div>
+      <div class="teach-desc">Reformer group fitness classes - a community moving together with strength and purpose.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <p class="section-eyebrow fade-in">Client love</p>
+  <h2 class="section-headline fade-in">What people say</h2>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text"></p>
+      <div class="testimonial-author">
+        <div class="author-avatar"></div>
+        <div>
+          <div class="author-name"></div>
+          <div class="author-tag"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in" style="transition-delay:0.1s">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text"></p>
+      <div class="testimonial-author">
+        <div class="author-avatar"></div>
+        <div>
+          <div class="author-name"></div>
+          <div class="author-tag">Private client</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card fade-in" style="transition-delay:0.2s">
+      <div class="testimonial-quote">"</div>
+      <p class="testimonial-text"></p>
+      <div class="testimonial-author">
+        <div class="author-avatar"></div>
+        <div>
+          <div class="author-name"></div>
+          <div class="author-tag"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-logo">Tiffany Yeh</div>
+  <ul class="footer-links">
+    <li><a href="mailto:hello@tiffanyyehpilates.ca">hello@tiffanyyehpilates.ca</a></li>
+    <li><a href="https://www.instagram.com/tiffany_yeh_" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    <li><a href="https://forms.gle/ZQ2rx6jGSWkUSSSV7">Book now</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Tiffany Yeh</p>
+</footer>
+
+<script>
+  // Scroll-triggered fade-ins
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
