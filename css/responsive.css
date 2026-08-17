@@ -1,0 +1,51 @@
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 100px 24px 60px;
+  }
+
+  .hero-visual { height: 360px; }
+  .hero-blob { width: 300px; height: 340px; }
+
+  .about-section,
+  .private-intro-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 24px;
+  }
+
+  .about-photo { order: 2; }
+
+  .fit-section,
+  .offer-section,
+  .locations-section,
+  .faq-section,
+  .testimonials-section {
+    padding: 60px 24px;
+  }
+
+  .fit-grid,
+  .offer-grid,
+  .location-list {
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+
+  .testimonial-card { padding: 30px 24px; }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

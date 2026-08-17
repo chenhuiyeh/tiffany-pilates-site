@@ -1,0 +1,31 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --sand: #f5f0e8;
+  --sand-mid: #ede6d6;
+  --sage: #7a9e87;
+  --sage-dk: #4f7360;
+  --stone: #b5a898;
+  --ink: #2c2c2a;
+  --warm-wh: #fdfaf5;
+  --muted: #6b6860;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-wh);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+a { color: inherit; }
+
+button, a { -webkit-tap-highlight-color: transparent; }

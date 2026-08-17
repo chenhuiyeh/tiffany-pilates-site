@@ -1,0 +1,61 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background: rgba(253, 250, 245, .9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(181, 168, 152, .2);
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding: 0 48px 0 80px;
+  background: var(--warm-wh);
+}
+
+.about-section,
+.private-intro-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 80px;
+  background: var(--sand);
+}
+
+.fit-section,
+.offer-section,
+.locations-section {
+  padding: 100px 80px;
+  background: var(--warm-wh);
+  text-align: center;
+}
+
+.faq-section {
+  padding: 100px 80px;
+  background: var(--warm-wh);
+}
+
+.contact-section {
+  padding: 100px 24px;
+  background: var(--sand);
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 80px;
+  background: var(--ink);
+}
