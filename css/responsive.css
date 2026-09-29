@@ -12,6 +12,7 @@
   .hero-blob { width: 300px; height: 340px; }
 
   .about-section,
+  .testimonials-section,
   .private-intro-section {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -23,8 +24,7 @@
   .fit-section,
   .offer-section,
   .locations-section,
-  .faq-section,
-  .testimonials-section {
+  .faq-section {
     padding: 20px 20px;
   }
 
