@@ -30,11 +30,11 @@ nav {
   align-items: center;
   gap: 80px;
   padding: 100px 80px;
-  background: var(--sand);
+  background: var(--warm-wh);
 }
 
 .fit-section,
-.offer-section,
+.services-section,
 .locations-section {
   padding: 100px 80px;
   background: var(--warm-wh);
@@ -48,7 +48,7 @@ nav {
 
 .contact-section {
   padding: 100px 24px;
-  background: var(--sand);
+  background: var(--warm-wh);
   text-align: center;
 }
 
@@ -57,5 +57,5 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 48px 80px;
-  background: var(--ink);
+  background: var(--sage-dk);
 }
