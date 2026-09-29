@@ -193,48 +193,33 @@
 
 @media (max-width: 600px) {
   .testimonials-section {
-    width: 100%;
-    padding: 64px 0 52px;
+    padding: 60px 0 50px;
     overflow: hidden;
   }
 
-  .testimonials-section .section-heading,
-  .testimonials-section > .section-eyebrow,
-  .testimonials-section > .section-headline {
-    margin-right: 20px;
-    margin-left: 20px;
+  .testimonials-section .section-heading {
+    padding: 0 20px;
   }
 
-  .testimonials-section .testimonial-carousel {
-    width: 100vw;
-    max-width: none;
+  .testimonial-carousel {
+    width: 100%;
     margin: 0;
   }
 
-  .testimonials-section .testimonials-track {
+  .testimonials-track {
     display: flex;
-    width: 100vw;
-    max-width: none;
     gap: 0;
     padding: 4px 20px 16px;
     overflow-x: auto;
-    overscroll-behavior-x: contain;
-    -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .testimonials-section .testimonial-card {
-    flex: 0 0 calc(100vw - 40px);
-    width: calc(100vw - 40px);
-    min-width: calc(100vw - 40px);
-    max-width: calc(100vw - 40px);
-    margin: 0;
+  .testimonial-card {
+    flex: 0 0 calc(100% - 40px);
+    min-width: calc(100% - 40px);
     padding: 28px 22px;
     scroll-snap-align: start;
-  }
-
-  .testimonials-section .testimonial-dots {
-    margin-top: 18px;
   }
 }
 
