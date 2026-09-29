@@ -23,8 +23,9 @@
   .fit-section,
   .offer-section,
   .locations-section,
-  .faq-section {
-    padding: 20px 20px;
+  .faq-section,
+  .testimonials-section {
+    padding: 20px 24px;
   }
 
   .fit-grid,
@@ -34,71 +35,7 @@
     margin-top: 35px;
   }
 
-  .testimonials-section {
-    width: 100%;
-    padding: 60px 0 50px;
-    overflow: hidden;
-  }
-
-  .testimonials-section > .section-eyebrow,
-  .testimonials-section > .section-headline,
-  .testimonials-section > .section-heading {
-    margin-right: 24px;
-    margin-left: 24px;
-  }
-
-  .testimonial-carousel {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    overflow: visible;
-  }
-
-  .testimonials-track {
-    display: flex;
-    align-items: stretch;
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    gap: 0;
-    padding: 4px 24px 18px;
-    overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 24px;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .testimonial-card {
-    flex: 0 0 calc(100vw - 48px);
-    width: calc(100vw - 48px);
-    min-width: calc(100vw - 48px);
-    max-width: calc(100vw - 48px);
-    height: auto;
-    min-height: 0;
-    margin: 0;
-    padding: 28px 22px;
-    overflow: visible;
-    scroll-snap-align: start;
-  }
-
-  .testimonial-text {
-    height: auto;
-    max-height: none;
-    margin-bottom: 24px;
-    overflow: visible;
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: normal;
-  }
-
-  .testimonial-author {
-    min-height: 40px;
-  }
-
-  .testimonial-dots {
-    margin-top: 18px;
-  }
+  .testimonial-card { padding: 20px 20px; }
 
   footer {
     flex-direction: column;
