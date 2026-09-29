@@ -193,23 +193,48 @@
 
 @media (max-width: 600px) {
   .testimonials-section {
-    padding: 70px 16px;
+    width: 100%;
+    padding: 64px 0 52px;
+    overflow: hidden;
   }
 
-  .testimonial-carousel {
+  .testimonials-section .section-heading,
+  .testimonials-section > .section-eyebrow,
+  .testimonials-section > .section-headline {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .testimonials-section .testimonial-carousel {
+    width: 100vw;
     max-width: none;
+    margin: 0;
   }
 
-  .testimonials-track {
-    gap: 16px;
+  .testimonials-section .testimonials-track {
+    display: flex;
+    width: 100vw;
+    max-width: none;
+    gap: 0;
+    padding: 4px 20px 16px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
   }
 
-  .testimonial-card {
-    flex-basis: 100%;
-    min-width: 100%;
+  .testimonials-section .testimonial-card {
+    flex: 0 0 calc(100vw - 40px);
+    width: calc(100vw - 40px);
+    min-width: calc(100vw - 40px);
+    max-width: calc(100vw - 40px);
+    margin: 0;
     padding: 28px 22px;
     scroll-snap-align: start;
+  }
+
+  .testimonials-section .testimonial-dots {
+    margin-top: 18px;
   }
 }
 
