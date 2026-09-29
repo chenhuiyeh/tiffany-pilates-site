@@ -25,7 +25,7 @@
   .locations-section,
   .faq-section,
   .testimonials-section {
-    padding: 60px 24px;
+    padding: 20px 20px;
   }
 
   .fit-grid,
@@ -35,7 +35,7 @@
     margin-top: 35px;
   }
 
-  .testimonial-card { padding: 30px 24px; }
+  .testimonial-card { padding: 20px 20px; }
 
   footer {
     flex-direction: column;

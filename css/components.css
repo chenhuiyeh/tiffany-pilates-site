@@ -191,27 +191,6 @@
 .testimonial-dot.active { width: 24px; border-radius: 20px; background: var(--muted); transform: scale(1.05); }
 .testimonial-dot:focus-visible { outline: 2px solid var(--sand-mid); outline-offset: 4px; }
 
-@media (max-width: 600px) {
-  .site-header {
-    height: 52px;
-    padding: 4px 16px;
-  }
-
-  .site-logo {
-    height: 36px;
-  }
-
-  .testimonials-section {
-    padding: 60px 0 50px;
-  }
-
-  .testimonial-card {
-    flex: 0 0 calc(100vw - 40px);
-    width: calc(100vw - 40px);
-    min-width: calc(100vw - 40px);
-  }
-}
-
 .contact-section .section-body { max-width: 520px; margin: 0 auto 28px; }
 .footer-logo { color: white; font-size: 1.1rem; }
 .footer-links a { color: rgba(255,255,255,.5); }
