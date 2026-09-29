@@ -192,34 +192,23 @@
 .testimonial-dot:focus-visible { outline: 2px solid var(--sand-mid); outline-offset: 4px; }
 
 @media (max-width: 600px) {
+  .site-header {
+    height: 52px;
+    padding: 4px 16px;
+  }
+
+  .site-logo {
+    height: 36px;
+  }
+
   .testimonials-section {
     padding: 60px 0 50px;
-    overflow: hidden;
-  }
-
-  .testimonials-section .section-heading {
-    padding: 0 20px;
-  }
-
-  .testimonial-carousel {
-    width: 100%;
-    margin: 0;
-  }
-
-  .testimonials-track {
-    display: flex;
-    gap: 0;
-    padding: 4px 20px 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
   }
 
   .testimonial-card {
-    flex: 0 0 calc(100% - 40px);
-    min-width: calc(100% - 40px);
-    padding: 28px 22px;
-    scroll-snap-align: start;
+    flex: 0 0 calc(100vw - 40px);
+    width: calc(100vw - 40px);
+    min-width: calc(100vw - 40px);
   }
 }
 
