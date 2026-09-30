@@ -34,7 +34,7 @@
     margin-top: 35px;
   }
 
-  .testimonial-card { width: 300px; height: 340px; padding: 60px 20px; }
+  .testimonial-card { width: 400px; height: 600px; padding: 60px 20px; }
 
   footer {
     flex-direction: column;
