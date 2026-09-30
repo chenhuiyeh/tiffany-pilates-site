@@ -172,7 +172,7 @@
 .faq-item { padding: 24px 0; border-top: 1px solid var(--sand-mid); }
 .faq-item h3 { font-size: 1.15rem; }
 
-.testimonials-section { padding: 100px 80px; background: var(--warm-wh); text-align: center; }
+.testimonials-section { background: var(--warm-wh); text-align: center; }
 .testimonials-section .section-eyebrow { color: var(--sage); }
 .testimonials-section .section-headline { margin-bottom: 60px; color: var(--ink); }
 .testimonial-carousel { max-width: 1000px; margin: 0 auto; }
