@@ -23,8 +23,7 @@
   .fit-section,
   .offer-section,
   .locations-section,
-  .faq-section,
-  .testimonials-section {
+  .faq-section {
     padding: 20px 24px;
   }
 
@@ -35,7 +34,24 @@
     margin-top: 35px;
   }
 
-  .testimonial-card { width: 300px; height: 1300px; padding: 20px 20px; }
+  .testimonials-track {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: visible;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .testimonial-text {
+    max-height: none;
+    overflow: visible;
+    white-space: normal;
+  }
 
   footer {
     flex-direction: column;
