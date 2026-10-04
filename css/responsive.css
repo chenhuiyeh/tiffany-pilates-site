@@ -1,6 +1,32 @@
 @media (max-width: 768px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
+  /* .nav-links { display: none; } */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links li:not(:last-child) {
+    display: none;
+  }
+
+  .nav-links li:last-child {
+    display: block;
+  }
+
+  .nav-links li:last-child a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--sage-dk);
+    color: white;
+    font-size: .68rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
 
   .hero {
     grid-template-columns: 1fr;
